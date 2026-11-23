@@ -1,7 +1,6 @@
 Here is the complete assignment answer in simple English, written in a proper theoretical format. You can copy it directly into your assignment.
 
-# Assignment: Understanding Version Control, Git, and GitHub Fundamentals
-
+# Assignment: Understanding Version Control,
 ## 1. What is Version Control and Why Is It Important?
 
 Version control is a system that helps developers track and manage changes made to files, source code, and software projects over time. It records different versions of a project so developers can see what changes were made, when they were made, and who made them.
