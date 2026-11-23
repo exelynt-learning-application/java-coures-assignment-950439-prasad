@@ -8,7 +8,7 @@ Version control is a system that helps developers track and manage changes made 
 
 Version control is important because it helps developers maintain their work safely. If someone makes a mistake or accidentally deletes important code, they can restore an earlier version of the project.
 
-It also allows multiple developers to work on the same project without losing each other's changes.
+It also allows multiple dopers to work on the same project without losing each other's changes.
 
 **Importance of Version Control:**
 
