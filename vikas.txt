@@ -1,58 +1,36 @@
-npm create vite@latest git-conflict-project -- --template react
-cd git-conflict-project
+npm create vite@latest git-merge-demo -- --template react
+cd git-merge-demo
 npm install
+npm run dev
 git init
 git add .
-git commit -m "Initial commit: create React project"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/git-conflict-project.git
-git push -u origin main
-git checkout -b feature-branch
+git commit -m "Initial React project setup"
 function App() {
   return (
     <div>
-      <h1>Feature Branch Version</h1>
-      <p>This content is from the feature branch.</p>
+      <h1>Git Merge Conflict Demo</h1>
+      <p>Original content</p>
     </div>
   );
 }
 
 export default App;
 git add .
-git commit -m "Update app content on feature branch"
-git checkout main
-git checkout -b update-branch
-git push -u origin feature-branch
-function App() {
-  return (
-    <div>
-      <h1>Update Branch Version</h1>
-      <p>This content is from the update branch.</p>
-    </div>
-  );
-}
+git commit -m "Add original application content"
+git switch -c feature-a
 
-export default App;
+<p>Content updated from Feature A</p>
 git add .
-git commit -m "Update app content on update branch"
-git push -u origin update-branch
-git merge feature-branch
-function App() {
-  return (
-    <div>
-      <h1>Git Merge Conflict Resolved</h1>
-      <p>Both branch changes have been reviewed and merged.</p>
-    </div>
-  );
-}
+git commit -m "Update content from feature A"
+git add .
+git commit -m "Update heading in feature A"
+git switch main
+git switch -c feature-b
+<p>Content updated from Feature B</p>
+git add .
+git commit -m "Update content from feature B"
 
-export default App;
+<h1>Git Merge Conflict Demo - Feature B</h1>
 git add .
-git commit -m "Resolve merge conflict between feature and update branches"
-git commit -m "Add project documentation"
-git commit -m "Update application heading"
-git commit -m "Add conflict resolution notes"
-git push origin update-branch
-git checkout main
-git merge update-branch
-git push origin main
+git commit -m "Update heading in feature B"
+git merge feature-a
